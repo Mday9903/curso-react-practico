@@ -1,12 +1,10 @@
-import './App.css'
-
-function App() {
+function MyAccount() {
 
   return (
     <div className='bg-red-100 text-black	'>
-      Hola mundo
+      MyAccount
     </div>
   )
 }
 
-export default App
+export default MyAccount
