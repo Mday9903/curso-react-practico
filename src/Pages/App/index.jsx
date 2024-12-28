@@ -5,6 +5,7 @@ import MyOrder from "../MyOrder";
 import MyOrders from "../MyOrders";
 import SigIn from "../SigIn";
 import NotFound from '../NotFound'
+import Navbar from "../../Components/Navbar";
 import "./App.css";
 
 // Creamos una funcion en donde van a estar almacenadas todas nuestras Routes usando useRoutes:
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppRoutes />
+      <Navbar/>
     </BrowserRouter>
   );
 };
