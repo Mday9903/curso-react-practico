@@ -7,12 +7,19 @@ function Home() {
   const [items, setItems] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.escuelajs.co/api/v1/products')
-    .then(response => response.json())
-    .then(data => setItems(data))
+    const fetchData = async () => {
+      try{
+        const response = await fetch('https://api.escuelajs.co/api/v1/products');
+        const data = await response.json();
+        setItems(data);
+      } catch(error) {
+        console.error("Ha ocurrido un problema: " + error)
+      }
+    }
+      fetchData()
   },[])
   
-  console.log(items)
+  // console.log(items)
 
   return (
     <Layout>
